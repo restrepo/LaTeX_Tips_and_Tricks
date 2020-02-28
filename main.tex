@@ -1,0 +1,31 @@
+\documentclass{article}
+%\usepackage[utf8]{inputenc}
+
+\title{\LaTeX{} tips \& tricks}
+\author{Diego Restrepo}
+\date{February 2020}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\maketitle
+\def\proyecto{hola}
+\section{Check if \LaTeX{} variable exists }
+
+\begin{itemize}
+%%item1
+
+\begingroup\expandafter\expandafter\expandafter\endgroup
+\expandafter\ifx\csname @proyecto\endcsname\relax
+\item  \proyecto
+\else
+  %pass
+\fi
+%\item cruel
+\end{itemize}
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
